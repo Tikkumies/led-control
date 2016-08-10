@@ -16,7 +16,8 @@ GPIO.setup(YELLOW, GPIO.OUT)
 def led1 ():
     while True:
         f = open("red_led.txt","r")
-        input= f.read()
+        help = f.read()
+        input = help[0]
         f.close()
         if input == 'a':
             GPIO.output(RED, True)
@@ -31,7 +32,8 @@ def led1 ():
 def led2 ():
     while True:
         f = open("green_led.txt", "r")
-        input= f.read()
+        help = f.read()
+        input = help[0]
         f.close()
         if input == 'a':
             GPIO.output(GREEN, True)
@@ -46,7 +48,8 @@ def led2 ():
 def led3 ():
     while True:
         f = open("yellow_led.txt","r")
-        input= f.read()
+        help = f.read()
+        input = help[0]
         f.close()
         if input == 'a':
             GPIO.output(YELLOW, True)
